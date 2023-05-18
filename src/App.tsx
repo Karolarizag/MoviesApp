@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
+import { Router } from './Router'
+import './global.css'
 
 export const App = () => {
   return (
-    <div>
-      netflix
+    <div className="app">
+      <Router />
     </div>
-  );
+  )
 }
