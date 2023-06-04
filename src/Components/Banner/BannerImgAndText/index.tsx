@@ -1,0 +1,1 @@
+export {BannerImgAndText} from './BannerImgAndText';
