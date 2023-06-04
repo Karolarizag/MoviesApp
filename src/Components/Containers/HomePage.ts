@@ -5,6 +5,11 @@ export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--dark-blue);
-  padding: 0 32px;
   overflow-x: hidden;
+  position: relative;
+`
+
+export const HomePageContent = styled.div`
+  display: flex;
+  flex-direction: column;
 `

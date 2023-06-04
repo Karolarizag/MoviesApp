@@ -1,0 +1,29 @@
+{
+  "homeContent": [
+    {
+      "id": 1,
+      "title": "Disfruta en tu tele", 
+      "text": "Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores, Blu-ray y muchos más.",
+      "img": "https://media.discordapp.net/attachments/754119455151358103/1114838762921398282/image.png?width=769&height=577"
+    },
+    {
+      "id": 2,
+      "title": "Usa cualquier dispositivo",
+      "text": "Ve en streaming todas las películas y series en tu móvil, tableta, ordenador y televisor.",
+      "img": "https://media.discordapp.net/attachments/754119455151358103/1114850989632147507/device-pile.png?width=476&height=476"
+    },
+    {
+      "id": 3,
+      "title": "Crea perfiles infantiles",
+      "text": "Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu suscripción.",
+      "img": "https://occ-0-3039-358.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABfqIddV64JsFW70ZLyiGkx_uJQMdtpWNP8g361QHR1WQSDmLmuv967PGBRIRJX9QB731ET5MlcyjW6-cYmVYL6JmtRuo6bjxD1wk.png?r=b32"
+    }, 
+    {
+      "id": 4,
+      "title": "Descárgate tus favoritas para verlas sin conexión",
+      "text": "Solo disponible en los planes sin anuncios.",
+      "img": "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg",
+      "popup": true
+    }
+  ]
+}
