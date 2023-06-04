@@ -5,7 +5,7 @@ export const PopUpContainer = styled.div`
   height: 90px;
   background-color: var(--dark-blue);
   border-radius: 15px;
-  border: 1px solid grey;
+  border: 1px solid var(--light-grey);
   position: absolute;
   bottom: 30px;
   display: flex;

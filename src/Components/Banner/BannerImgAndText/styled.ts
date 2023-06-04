@@ -9,7 +9,7 @@ export const BannerContainer = styled.div<{ toLeft: boolean }>`
   align-items: center;
   gap: 30px;
   padding: 50px 0 80px;
-  border-bottom: 8px solid grey;
+  border-bottom: 8px solid var(--dark-grey);
 `;
 
 export const BannerText = styled.p<{ 

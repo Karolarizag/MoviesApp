@@ -21,7 +21,6 @@ export const BannerImgAndText = ({
   toLeft,
   popup,
 }: BannerImgAndTextProps) => {
-  console.log(toLeft);
   return (
     <BannerContainer toLeft={toLeft}>
       <div>
