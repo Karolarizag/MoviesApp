@@ -23,4 +23,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--sans);
+  background-color: var(--dark-blue);
+  color: var(--white);
+  height: 98%;
 }

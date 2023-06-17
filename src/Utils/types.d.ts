@@ -9,3 +9,10 @@ export type HomeContentType = {
   text: string
   img: string
 }
+
+export type UsersCardType = {
+  id: number
+  name: string
+  img?: string
+  extraField?: string
+}
