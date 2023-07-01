@@ -11,6 +11,7 @@ export type buttonProps = {
   fontWeight?: string
   border?: string
   fontSize?: string
+  code?: string
 }
 
 export const Button = ({
@@ -24,6 +25,7 @@ export const Button = ({
   fontWeight,
   fontSize,
   border,
+  code
 }: buttonProps) => {
   return (
     <ButtonContainer
@@ -36,6 +38,7 @@ export const Button = ({
       fontWeight={fontWeight}
       border={border}
       fontSize={fontSize}
+      code={code}
     >
       {children}
     </ButtonContainer>

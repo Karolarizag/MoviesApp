@@ -17,10 +17,16 @@ export const UserSelector = ({
   UserCards,
   EventHandler,
 }: UserSelectorProps) => {
+
   const renderUserCard = UserCards.map((item: UsersCardType) => {
     const { id, name, img, extraField } = item;
+    const handleClick = () => {
+      if (!extraField) {
+        EventHandler();
+      }
+    };
     return (
-      <UserCardContainer key={id} onClick={!extraField && EventHandler}>
+      <UserCardContainer key={id} onClick={handleClick}>
         <UserCardImg img={img as string} />
         <UserCardName>{name}</UserCardName>
       </UserCardContainer>

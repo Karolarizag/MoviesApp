@@ -11,4 +11,13 @@ export const ButtonContainer = styled.button<buttonProps>`
   font-weight: ${({ fontWeight }) => fontWeight};
   background-color: ${({ backgroundColor }) => backgroundColor};
   font-size: ${({ fontSize }) => fontSize};
+
+  ${({code}) => {
+    if (code === "primary") {
+      return css`
+        background-color: var(--white);
+      `
+    }
+  }}
+
 `
