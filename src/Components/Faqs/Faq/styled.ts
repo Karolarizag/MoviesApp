@@ -23,6 +23,5 @@ export const FaqTitle = styled.div`
 export const FaqText = styled.div`
   background-color: var(--dark-grey);
   padding: 20px 32px;
-  transition: 0.8s;
-  
+  transition: 1s;
 `

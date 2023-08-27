@@ -1,43 +1,64 @@
-import { ButtonContainer } from './styled'
+import { ButtonContainer } from "./styled";
 
 export type buttonProps = {
-  color?: string
-  height?: string
-  width?: string
-  padding?: string
-  borderRadius?: string
-  children?: any
-  backgroundColor?: string
-  fontWeight?: string
-  border?: string
-  fontSize?: string
-}
+  backgroundColor?: string;
+  border?: string;
+  borderRadius?: string;
+  bottom?: string;
+  children?: any;
+  code?: string;
+  color?: string;
+  cursor?: string;
+  fontSize?: string;
+  fontWeight?: string;
+  height?: string;
+  left?: string;
+  padding?: string;
+  position?: string;
+  right?: string;
+  top?: string;
+  width?: string;
+};
 
 export const Button = ({
-  color,
-  height,
-  width,
-  padding,
-  children,
-  borderRadius,
   backgroundColor,
-  fontWeight,
-  fontSize,
   border,
+  borderRadius,
+  bottom,
+  children,
+  code,
+  color,
+  cursor = "pointer",
+  fontSize = '1.2vw',
+  fontWeight,
+  height,
+  left,
+  padding,
+  position,
+  right,
+  top,
+  width,
 }: buttonProps) => {
   return (
     <ButtonContainer
-      color={color}
-      height={height}
-      width={width}
-      padding={padding}
-      borderRadius={borderRadius}
       backgroundColor={backgroundColor}
-      fontWeight={fontWeight}
       border={border}
+      borderRadius={borderRadius}
+      bottom={bottom}
+      code={code}
+      color={color}
+      cursor={cursor}
       fontSize={fontSize}
+      fontWeight={fontWeight}
+      height={height}
+      padding={padding}
+      left={left}
+      position={position}
+      right={right}
+      top={top}
+      width={width}
     >
       {children}
     </ButtonContainer>
-  )
-}
+  );
+};
