@@ -1,11 +1,11 @@
-import { BannerBackgroundImage } from "../Components/Banner/BannerBackgroundImage";
-import { BannerImgAndText } from "../Components/Banner/BannerImgAndText";
-import { HomePageContainer, HomePageContent } from "../Components/Containers";
-import { Header } from "../Components/Header";
-import { isOdd } from "../Services/Utils";
-import data from "../Data/data.json";
-import { Faqs } from "../Components/Faqs";
-import { Footer } from "../Components/Footer/Footer";
+import { BannerBackgroundImage } from "../../Components/Banner/BannerBackgroundImage";
+import { BannerImgAndText } from "../../Components/Banner/BannerImgAndText";
+import { HomePageContainer, HomePageContent } from "../../Components/Containers";
+import { Header } from "../../Components/Header";
+import { isOdd } from "../../Services/Utils";
+import data from "../../Data/data.json";
+import { Faqs } from "../../Components/Faqs";
+import { Footer } from "../../Components/Footer/Footer";
 
 export const Home = () => {
   const { homeContent, faqs } = data;

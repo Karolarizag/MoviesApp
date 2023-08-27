@@ -9,6 +9,8 @@
   --dark-grey: rgb(66, 65, 65);
   --black-opacity-6: #0000006d;
   --white-opacity-3: #ffffff3d;
+  --white-opacity-6: #ffffff6d;
+  --white-opacity-9: #ffffff9d;
   --white: #fff;
 
   /* Fonts */
@@ -22,8 +24,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--sans);
   background-color: var(--dark-blue);
   color: var(--white);
+  font-family: var(--sans);
   height: 98%;
 }

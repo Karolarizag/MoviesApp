@@ -1,2 +1,2 @@
-export { HomePageContainer, HomePageContent } from './HomePage'
-export { DashboardContainer } from './Dashboard'
+export { HomePageContainer, HomePageContent } from '../../Pages/Home/HomePage'
+export { DashboardContainer } from '../../Pages/Dashboard/styled'

@@ -24,6 +24,17 @@ export const HeroBackground = styled.div`
   background-position: center center;
   position: absolute;
   z-index: 0;
+  
+  @media (max-width: 1024px) {
+    width: 108vw;
+    height: 35vh;
+    left: -8vw;
+  }
+  
+  @media (max-width: 600px) {
+    width: 108vw;
+    height: 20vh;
+  }
 `;
 
 export const HeroIcon = styled.div`
@@ -37,14 +48,39 @@ export const HeroIcon = styled.div`
   left: -5vw;
 
   @media (max-width: 1024px) {
-    width: 80%;
-    height: 40%;
-    left: 0;
+    left: 2vw;
+    top: 13vh;
   }
   
   @media (max-width: 600px) {
-    width: 300px;
-    height: 120px;
-    top: 50%;
+    height: 8vh;
+    top: 5vh;
+  }
+`
+export const DashboardButtonContainer = styled.div`
+  position: absolute;
+  top: 50vh;
+  left: 8vw;
+  display: flex;
+  gap: 0.5vw;
+  
+  @media (max-width: 1024px) {
+    top: 25vh;
+    left: 13vw;
+
+    >button >svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    top: 14vh;
+    left: 12vw;
+
+    >button >svg {
+      width: 8px;
+      height: 8px;
+    }
   }
 `
