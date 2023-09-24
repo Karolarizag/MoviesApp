@@ -12,7 +12,7 @@ export const ButtonContainer = styled.button<buttonProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   font-size: ${({ fontSize }) => fontSize};
   cursor: ${({ cursor }) => cursor};
-  font-family: var(--sans);
+  font-family: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;

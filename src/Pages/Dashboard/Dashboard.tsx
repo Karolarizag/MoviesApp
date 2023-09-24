@@ -8,6 +8,7 @@ import { Rail } from "../../Components/Rail";
 import { GetPopularMovies } from "../../Services/GetPopularMovies";
 import { GetGenres } from "../../Services/GetGenres";
 import { ListOfMovies } from "../../Components/ListOfMovies";
+import { GenreTitleStyled } from "../../Components/ListOfMovies/styled";
 
 export const Dashboard = () => {
   const [showSelectUser, setShowSelectUser] = useState(true);
@@ -23,8 +24,8 @@ export const Dashboard = () => {
     );
   };
 
-  const {popularMovies } = GetPopularMovies()
-  const {genres} = GetGenres()
+  const { popularMovies } = GetPopularMovies();
+  const { genres } = GetGenres();
 
   return showSelectUser ? (
     RenderUserSelector()
@@ -32,13 +33,22 @@ export const Dashboard = () => {
     <DashboardContainer>
       <Hero />
       <RailsContainer>
-        <Rail movies={popularMovies.slice(0,9)} type="vertical-cards" />
-        {
-          genres.map((genre) => {
-            const {id, name} = genre
-            return <ListOfMovies id={id} name={name}  />
-          })
-        }
+        {genres.map((genre) => {
+          const { id, name } = genre;
+          if (id === 12) {
+            return (
+              <>
+              <GenreTitleStyled>Top 10: Global</GenreTitleStyled>
+              <Rail
+                movies={popularMovies.slice(0, 10)}
+                type="vertical-cards"
+                key={id}
+                />
+                </>
+            );
+          }
+          return <ListOfMovies id={id} name={name} key={id} />;
+        })}
       </RailsContainer>
     </DashboardContainer>
   );

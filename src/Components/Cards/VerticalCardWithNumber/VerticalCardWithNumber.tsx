@@ -1,5 +1,9 @@
 import { MovieType } from "../../../Utils/types";
-import { ImageStyled, NumberStyled, VerticalWithNumberContainer } from "./styled";
+import {
+  ImageStyled,
+  NumberStyled,
+  VerticalWithNumberContainer,
+} from "./styled";
 
 export const VerticalCardWithNumber = ({
   movie,
@@ -11,7 +15,7 @@ export const VerticalCardWithNumber = ({
   const img = `${process.env.REACT_APP_API_IMG}${movie.poster_path}`;
 
   return (
-    <VerticalWithNumberContainer>
+    <VerticalWithNumberContainer bigger={id === 9}>
       <NumberStyled>{id + 1}</NumberStyled>
       <ImageStyled img={img} />
     </VerticalWithNumberContainer>

@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const VerticalWithNumberContainer = styled.div`
+export const VerticalWithNumberContainer = styled.div<{ bigger: boolean }>`
   height: 173px;
-  width: 202px;
+  width: ${({ bigger }) => (bigger ? "273" : "202")}px;
   position: relative;
 
   @media (max-width: 1024px) {
     height: 166px;
-    width: 200px;
+    width: ${({ bigger }) => (bigger ? "257" : "195")}px;
   }
 
   @media (max-width: 600px) {
     height: 134px;
-    width: 182px;
+    width: ${({ bigger }) => (bigger ? "208" : "162")}px;
   }
 `;
 
@@ -40,8 +40,8 @@ export const NumberStyled = styled.p`
   }
 `;
 
-export const ImageStyled = styled.div<{img: string}>`
-  background-image: url(${({img}) => img});
+export const ImageStyled = styled.div<{ img: string }>`
+  background-image: url(${({ img }) => img});
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -49,4 +49,12 @@ export const ImageStyled = styled.div<{img: string}>`
   width: 115px;
   position: absolute;
   right: 0px;
-`
+
+  @media (max-width: 1024px) {
+    width: 112px;
+  }
+
+  @media (max-width: 600px) {
+    width: 90px;
+  }
+`;
