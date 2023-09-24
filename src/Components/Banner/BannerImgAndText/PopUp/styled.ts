@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const PopUpContainer = styled.div`
   width: 80%;
   height: 90px;
-  background-color: var(--dark);
+  background-color: var(--dark-blue);
   border-radius: 15px;
   border: 1px solid var(--light-grey);
   position: absolute;
