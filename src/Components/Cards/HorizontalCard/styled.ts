@@ -8,11 +8,6 @@ export const HorizontalCardContainer = styled.div`
   cursor: pointer;
 
   @media (max-width: 1024px) {
-    width: 234px;
-    height: 131px;
-  }
-
-  @media (max-width: 1024px) {
     width: 188px;
     height: 106px;
   }
