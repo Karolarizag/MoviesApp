@@ -1,0 +1,1 @@
+export {VerticalCardWithNumber} from './VerticalCardWithNumber';

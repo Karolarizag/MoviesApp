@@ -4,7 +4,7 @@ export const HomePageContainer = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--dark-blue);
+  background-color: var(--dark);
   overflow-x: hidden;
   position: relative;
 `

@@ -12,8 +12,8 @@ export const HeroBackground = styled.div`
       hsla(0, 0%, 8%, 0.25) 45%,
       hsla(0, 0%, 8%, 0.85) 69%,
       hsla(0, 0%, 8%, 0.99) 84%,
-      var(--dark-blue) 98%,
-      var(--dark-blue)
+      var(--dark) 98%,
+      var(--dark)
     ),
     url("https://wallpapers.com/images/featured/bridgerton-lh7t67sqh4t7gt1n.jpg");
   width: 100vw;

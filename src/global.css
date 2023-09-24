@@ -11,6 +11,7 @@
   --white-opacity-3: #ffffff3d;
   --white-opacity-6: #ffffff6d;
   --white-opacity-9: #ffffff9d;
+  --dark: #141414;
   --white: #fff;
 
   /* Fonts */
@@ -24,7 +25,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--dark-blue);
+  background-color: var(--dark);
   color: var(--white);
   font-family: var(--sans);
   height: 98%;
