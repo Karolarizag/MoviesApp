@@ -33,7 +33,7 @@ export const Dashboard = () => {
     <DashboardContainer>
       <Hero />
       <RailsContainer>
-        {genres.map((genre) => {
+        {genres.slice(0,6).map((genre) => {
           const { id, name } = genre;
           if (id === 12) {
             return (

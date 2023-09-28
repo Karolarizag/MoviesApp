@@ -5,6 +5,10 @@ export const RailContainer = styled.div`
   color: var(--white);
   margin-bottom: 5vh;
 
+  .react-multi-carousel-list {
+    overflow: initial !important;
+  }
+
   .react-multi-carousel-item {
     display: contents !important;
   }
