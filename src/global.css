@@ -6,6 +6,7 @@
   --red: #e50914;
   --dark-blue: #010101;
   --blue: #0071eb;
+  --green: #45ce67;
   --light-grey: rgb(101, 100, 100);
   --dark-grey: rgb(66, 65, 65);
   --black-opacity-6: #0000006d;
@@ -20,6 +21,7 @@
   --secondary: 'Open Sans', sans-serif;
   --light: 100;
   --regular: 400;
+  --semiBold: 600;
   --bold: 700;
 }
 

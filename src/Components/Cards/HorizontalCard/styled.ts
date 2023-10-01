@@ -14,10 +14,6 @@ export const HorizontalCardContainer = styled.div`
     height: 106px;
     margin-right: 1.5vw;
   }
-
-  &:hover {
-    transform: scaleY(1.1) scaleX(1.1);
-  }
 `;
 
 export const BackdropImage = styled.div<{ img: string }>`

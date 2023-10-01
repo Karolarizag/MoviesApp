@@ -40,8 +40,10 @@ export const Rail = ({
     }
   };
 
+  const position = type === "vertical-cards" ? "relative" : ""
+
   return (
-    <RailContainer>
+    <RailContainer position={position}>
       <Carousel
         infinite={true}
         ssr={true}
