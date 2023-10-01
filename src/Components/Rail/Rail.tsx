@@ -5,8 +5,13 @@ import { HorizontalCard } from "../Cards/HorizontalCard";
 import { RailContainer } from "./styled";
 import { VerticalCardWithNumber } from "../Cards/VerticalCardWithNumber/VerticalCardWithNumber";
 
-export const Rail = ({ movies, type }: { movies: MovieType[], type: string }) => {
-  
+export const Rail = ({
+  movies,
+  type,
+}: {
+  movies: MovieType[];
+  type: string;
+}) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -18,7 +23,7 @@ export const Rail = ({ movies, type }: { movies: MovieType[], type: string }) =>
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -29,14 +34,16 @@ export const Rail = ({ movies, type }: { movies: MovieType[], type: string }) =>
   const parseTypeOfCards = (movie: MovieType, idx: number) => {
     switch (type) {
       case "vertical-cards":
-        return <VerticalCardWithNumber movie={movie} id={idx} key={movie.id} />     
+        return <VerticalCardWithNumber movie={movie} id={idx} key={movie.id} />;
       default:
         return <HorizontalCard movie={movie} key={movie.id} />;
     }
-  }
+  };
+
+  const position = type === "vertical-cards" ? "relative" : ""
 
   return (
-    <RailContainer>
+    <RailContainer position={position}>
       <Carousel
         infinite={true}
         ssr={true}
@@ -45,7 +52,7 @@ export const Rail = ({ movies, type }: { movies: MovieType[], type: string }) =>
         responsive={responsive}
       >
         {movies.map((movie: MovieType, idx: number) => {
-          return parseTypeOfCards(movie, idx)
+          return parseTypeOfCards(movie, idx);
         })}
       </Carousel>
     </RailContainer>

@@ -5,4 +5,5 @@ export const GenreTitleStyled = styled.p`
   position: relative;
   font-family: var(--primary);
   padding-left: 5%;
+  z-index: -1;
 `

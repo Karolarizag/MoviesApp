@@ -3,13 +3,16 @@ import styled from "styled-components";
 export const HorizontalCardContainer = styled.div`
   width: 240px;
   height: 135px;
-  margin-right: 0.4vw;
+  margin-right: 0.9vw;
   border-radius: 3px;
   cursor: pointer;
-
-  @media (max-width: 1024px) {
-    width: 188px;
+  border-radius: 3px;
+  overflow: hidden;
+  
+  @media (max-width: 600px) {
+    width: 156px;
     height: 106px;
+    margin-right: 1.5vw;
   }
 `;
 
@@ -20,4 +23,9 @@ export const BackdropImage = styled.div<{ img: string }>`
   background-size: cover;
   width: 240px;
   height: 135px;
+  
+  @media (max-width: 600px) {
+    width: 156px;
+    height: 106px;
+  }
 `;

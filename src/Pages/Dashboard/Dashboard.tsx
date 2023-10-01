@@ -33,18 +33,18 @@ export const Dashboard = () => {
     <DashboardContainer>
       <Hero />
       <RailsContainer>
-        {genres.map((genre) => {
+        {genres.slice(0, 6).map((genre, idx) => {
           const { id, name } = genre;
           if (id === 12) {
             return (
-              <>
-              <GenreTitleStyled>Top 10: Global</GenreTitleStyled>
-              <Rail
-                movies={popularMovies.slice(0, 10)}
-                type="vertical-cards"
-                key={id}
+              <div key={id}>
+                <GenreTitleStyled>Top 10: Global</GenreTitleStyled>
+                <Rail
+                  movies={popularMovies.slice(0, 10)}
+                  type="vertical-cards"
+                  key={id}
                 />
-                </>
+              </div>
             );
           }
           return <ListOfMovies id={id} name={name} key={id} />;
