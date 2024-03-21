@@ -15,7 +15,7 @@ export const Header = () => {
           border="none"
           fontWeight="var(--bold)"
         >
-          Iniciar sesión
+          Entrar
         </Button>
       </Link>
     </StyledHeaderContainer>
