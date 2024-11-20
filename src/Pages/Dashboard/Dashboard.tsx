@@ -4,11 +4,8 @@ import { UserSelector } from "../../Components/UserSelector";
 import { DashboardContainer } from "../../Components/Containers";
 import { Hero } from "./Hero/Hero";
 import { RailsContainer } from "./styled";
-import { Rail } from "../../Components/Rail";
-import { GetPopularMovies } from "../../Services/GetPopularMovies";
 import { GetGenres } from "../../Services/GetGenres";
 import { ListOfMovies } from "../../Components/ListOfMovies";
-import { GenreTitleStyled } from "../../Components/ListOfMovies/styled";
 
 export const Dashboard = () => {
   const [showSelectUser, setShowSelectUser] = useState(true);
@@ -23,8 +20,6 @@ export const Dashboard = () => {
       />
     );
   };
-
-  const { popularMovies } = GetPopularMovies();
   const { genres } = GetGenres();
 
   return showSelectUser ? (
@@ -35,18 +30,6 @@ export const Dashboard = () => {
       <RailsContainer>
         {genres.slice(0, 6).map((genre, idx) => {
           const { id, name } = genre;
-          if (id === 12) {
-            return (
-              <div key={id}>
-                <GenreTitleStyled>Top 10: Global</GenreTitleStyled>
-                <Rail
-                  movies={popularMovies.slice(0, 10)}
-                  type="vertical-cards"
-                  key={id}
-                />
-              </div>
-            );
-          }
           return <ListOfMovies id={id} name={name} key={id} />;
         })}
       </RailsContainer>

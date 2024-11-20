@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const VerticalWithNumberContainer = styled.div<{ bigger: boolean }>`
+export const VerticalWithNumberContainer = styled.div`
   height: 173px;
-  width: ${({ bigger }) => (bigger ? "273" : "202")}px;
+  width: 202px;
   position: relative;
 
   @media (max-width: 1024px) {
     height: 166px;
-    width: ${({ bigger }) => (bigger ? "257" : "195")}px;
+    width: 195px;
   }
 
   @media (max-width: 600px) {
     height: 134px;
-    width: ${({ bigger }) => (bigger ? "208" : "162")}px;
+    width: 162px;
   }
 `;
 

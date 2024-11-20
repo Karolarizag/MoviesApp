@@ -1,4 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const HorizontalCardHoveredContainer = styled.div`
   width: 300px;
@@ -11,6 +23,7 @@ export const HorizontalCardHoveredContainer = styled.div`
   -moz-box-shadow: 0px 0px 28px -5px rgba(0, 0, 0, 0.93);
   box-shadow: 0px 0px 28px -5px rgba(0, 0, 0, 0.93);
   top: -150px;  
+  animation: ${fadeIn} 0.5s ease-in-out forwards;
 
 `;
 
