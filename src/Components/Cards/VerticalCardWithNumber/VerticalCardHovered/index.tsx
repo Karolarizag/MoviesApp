@@ -1,0 +1,1 @@
+export {VerticalCardHovered} from './VerticalCardHovered';

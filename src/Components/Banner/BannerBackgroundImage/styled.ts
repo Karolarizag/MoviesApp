@@ -14,7 +14,7 @@ export const StyledBannerBackgroundImageContainer = styled.div`
       rgba(1, 1, 1, 0.24) 64.25%,
       rgba(4, 4, 4, 0.8) 96.63%
     ),
-    url(https://assets.nflxext.com/ffe/siteui/vlv3/51e53f54-0d9f-40ec-9e05-c030def06ac9/8ec28ec6-0452-4c44-93fe-5bb93f423eaf/ES-es-20230515-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    url('/mainscreen.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
