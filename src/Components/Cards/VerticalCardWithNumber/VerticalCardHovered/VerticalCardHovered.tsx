@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import {
   ChevronDownIcon,
   PlayCircleIcon,
@@ -12,11 +13,11 @@ import {
 } from "./styled";
 
 export const VerticalCardHovered = ({ movie }: { movie: MovieType }) => {
-  const img = `${process.env.REACT_APP_API_IMG}${movie.poster_path}`;
+  const navigate = useNavigate();
 
   return (
     <VarticalCardHoveredContainer>
-      <ImageStyled img={img}>
+      <ImageStyled img={movie.poster_path}>
       </ImageStyled>
       <CardContent>
             <Icon
@@ -35,15 +36,18 @@ export const VerticalCardHovered = ({ movie }: { movie: MovieType }) => {
               border="1px solid var(--white)"
               borderRadius="100px"
             />
-            <Icon
-              icon={ChevronDownIcon}
-              heightContainer="42px"
-              widthContainer="39px"
-              height="20px"
-              width="20px"
-              border="1px solid var(--white)"
-              borderRadius="100px"
-            />
+            
+            <div onClick={() => navigate(`/movieDetail/${movie.id}`)}>
+              <Icon
+                icon={ChevronDownIcon}
+                heightContainer="42px"
+                widthContainer="39px"
+                height="20px"
+                width="20px"
+                border="1px solid var(--white)"
+                borderRadius="100px"
+              />
+            </div>
       </CardContent>
     </VarticalCardHoveredContainer>
   );

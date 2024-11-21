@@ -5,10 +5,11 @@ import { FaqsContainer, FaqsTitle } from "./styled";
 
 type FaqsProps = {
   title: string;
+  subtitle: string;
   content: FaqType[];
 };
 
-export const Faqs = ({ title, content }: FaqsProps) => {
+export const Faqs = ({ title, subtitle, content }: FaqsProps) => {
   const renderContent = () => {
     return content?.map((item: FaqType, idx: number) => {
       return <Faq key={idx} title={item.title} text={item.text} />;
@@ -19,10 +20,7 @@ export const Faqs = ({ title, content }: FaqsProps) => {
     <FaqsContainer>
       <FaqsTitle>{title}</FaqsTitle>
       {renderContent()}
-      <p>
-        ¿Quieres ver algo ya? Escribe tu dirección de correo para crear una
-        suscripción a Netflix o reactivarla.
-      </p>
+      <p>{subtitle}</p>
       <SignIn center={true} />
     </FaqsContainer>
   );

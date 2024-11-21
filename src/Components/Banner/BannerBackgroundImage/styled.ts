@@ -18,7 +18,7 @@ export const StyledBannerBackgroundImageContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 580px;
+  height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

@@ -14,16 +14,15 @@ export const VerticalCardWithNumber = ({
   movie: MovieType;
   id: number;
 }) => {
-  const img = `${process.env.REACT_APP_API_IMG}${movie.poster_path}`;
   const [isHover, setIsHover] = useState(false);
-  
-  const showHover = () => {setIsHover(true)};
+
+  const showHover = () => setIsHover(true)
   const hideHover = () => setIsHover(false);
 
   return (
     <VerticalWithNumberContainer onMouseEnter={showHover} onMouseLeave={hideHover}>
       <NumberStyled>{id + 1}</NumberStyled>
-      <ImageStyled img={img} />
+      <ImageStyled img={movie.poster_path} />
       
       {isHover && <VerticalCardHovered movie={movie} />}
     </VerticalWithNumberContainer>

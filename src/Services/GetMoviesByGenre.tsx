@@ -11,6 +11,11 @@ export const GetMoviesByGenre = (id: number) => {
       const request = await fetch(API_URL)
       const response = await request.json()
       setLoading(false)
+      response.results.map((movie: any) => {
+        movie.backdrop_path = `${process.env.REACT_APP_API_IMG}${movie.backdrop_path}`
+        movie.poster_path = `${process.env.REACT_APP_API_IMG}${movie.poster_path}`
+      })
+      console.log(response.results)
       setGenreMovies(response.results)
     }
     fetchData()

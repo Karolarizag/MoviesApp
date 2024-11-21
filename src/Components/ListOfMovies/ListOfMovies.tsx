@@ -9,9 +9,9 @@ export const ListOfMovies = ({ id, name }: { id: number; name: string }) => {
 
   return (
     <>
-      <GenreTitleStyled>{id === 12 ? 'Top 10: Global' : name}</GenreTitleStyled>
+      <GenreTitleStyled>{id === 12 ? 'Top 5: Global' : name}</GenreTitleStyled>
       <Rail 
-        movies={id === 12 ? popularMovies.slice(0, 10) : genreMovies} 
+        movies={id === 12 ? popularMovies.slice(0, 5) : genreMovies} 
         type={id !== 12 ? "horizontal-cards" : "vertical-cards"} 
       />
     </>

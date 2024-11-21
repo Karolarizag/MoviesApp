@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import { GetMovieGenres } from "../../../../Services/GetMovieGenres";
 import {
   ChevronDownIcon,
@@ -18,12 +19,12 @@ import {
 } from "./styled";
 
 export const HorizontalCardHovered = ({ movie }: { movie: MovieType }) => {
-  const img = `${process.env.REACT_APP_API_IMG}${movie.backdrop_path}`;
+  const navigate = useNavigate()
   const { movieGenres } = GetMovieGenres(movie.genre_ids.slice(0,3));
 
   return (
     <HorizontalCardHoveredContainer>
-      <ImageStyled img={img}>
+      <ImageStyled img={movie.backdrop_path}>
         <Title>{movie.title}</Title>
       </ImageStyled>
       <CardContent>
@@ -55,22 +56,24 @@ export const HorizontalCardHovered = ({ movie }: { movie: MovieType }) => {
               borderRadius="100px"
             />
           </Separator>
-          <Icon
-            icon={ChevronDownIcon}
-            heightContainer="42px"
-            widthContainer="39px"
-            height="20px"
-            width="20px"
-            border="1px solid var(--white)"
-            borderRadius="100px"
-          />
+          <div onClick={() => navigate(`/movieDetail/${movie.id}`)}>
+            <Icon
+              icon={ChevronDownIcon}
+              heightContainer="42px"
+              widthContainer="39px"
+              height="20px"
+              width="20px"
+              border="1px solid var(--white)"
+              borderRadius="100px"
+              />
+            </div>
         </Container>
         <Text fontColor="var(--green)" fontWeight="var(--semiBold)">
           {movie.vote_average * 10} % de coincidencia
         </Text>
         <Container flex="">
-          {movieGenres.map((genre: GenreType) => {
-            return <Text> {genre.name}</Text>;
+          {movieGenres.map((genre: GenreType, idx: number) => {
+            return <Text key={idx}> {genre.name}</Text>;
           })}
         </Container>
       </CardContent>
