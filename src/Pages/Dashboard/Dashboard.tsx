@@ -2,10 +2,10 @@ import data from "../../Data/data.json";
 import { useState } from "react";
 import { UserSelector } from "../../Components/UserSelector";
 import { DashboardContainer } from "../../Components/Containers";
-import { Hero } from "./Hero/Hero";
 import { RailsContainer } from "./styled";
 import { GetGenres } from "../../Services/GetGenres";
 import { ListOfMovies } from "../../Components/ListOfMovies";
+import { HeroComponent } from "../../Components/Hero";
 
 export const Dashboard = () => {
   const [showSelectUser, setShowSelectUser] = useState(true);
@@ -26,7 +26,7 @@ export const Dashboard = () => {
     RenderUserSelector()
   ) : (
     <DashboardContainer>
-      <Hero />
+      <HeroComponent img={dashboard.heroImage} complements />
       <RailsContainer>
         {genres.slice(0, 6).map((genre, idx) => {
           const { id, name } = genre;

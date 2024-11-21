@@ -1,11 +1,11 @@
 import { BannerBackgroundImage } from "../../Components/Banner/BannerBackgroundImage";
 import { BannerImgAndText } from "../../Components/Banner/BannerImgAndText";
-import { HomePageContainer, HomePageContent } from "../../Components/Containers";
 import { Header } from "../../Components/Header";
 import { isOdd } from "../../Services/Utils";
 import data from "../../Data/data.json";
 import { Faqs } from "../../Components/Faqs";
 import { Footer } from "../../Components/Footer/Footer";
+import { HomePageContainer, HomePageContent } from "./styled";
 
 export const Home = () => {
   const { homeContent, faqs } = data;
@@ -32,7 +32,7 @@ export const Home = () => {
       <HomePageContent>
         <BannerBackgroundImage />
         {renderContent()}
-        <Faqs title={faqs.title} content={faqs.content} />
+        <Faqs title={faqs.title} subtitle={faqs.subtitle} content={faqs.content} />
       </HomePageContent>
       <Footer />
     </HomePageContainer>

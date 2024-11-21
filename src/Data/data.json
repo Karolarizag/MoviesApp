@@ -28,6 +28,7 @@
   ],
   "faqs": {
     "title": "Preguntas frecuentes", 
+    "subtitle": "¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.",
     "content": [
       {
         "title": "¿Esta es la página oficial de Netflix?",
@@ -93,6 +94,7 @@
         "name": "Añadir perfil", 
         "extraField": "add-profile" 
       }
-    ]
+    ],
+    "heroImage": "https://wallpapers.com/images/featured/bridgerton-lh7t67sqh4t7gt1n.jpg"
   }
 }
