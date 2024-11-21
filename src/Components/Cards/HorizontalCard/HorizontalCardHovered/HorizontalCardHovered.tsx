@@ -69,7 +69,7 @@ export const HorizontalCardHovered = ({ movie }: { movie: MovieType }) => {
             </div>
         </Container>
         <Text fontColor="var(--green)" fontWeight="var(--semiBold)">
-          {movie.vote_average * 10} % de coincidencia
+          {Math.round(movie.vote_average) } % de coincidencia
         </Text>
         <Container flex="">
           {movieGenres.map((genre: GenreType, idx: number) => {

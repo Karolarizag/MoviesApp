@@ -15,7 +15,6 @@ export const GetMoviesByGenre = (id: number) => {
         movie.backdrop_path = `${process.env.REACT_APP_API_IMG}${movie.backdrop_path}`
         movie.poster_path = `${process.env.REACT_APP_API_IMG}${movie.poster_path}`
       })
-      console.log(response.results)
       setGenreMovies(response.results)
     }
     fetchData()
